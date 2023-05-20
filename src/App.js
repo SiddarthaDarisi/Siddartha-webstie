@@ -3,7 +3,7 @@ import HomePage from './HomePage.js';
 import Box from '@mui/material/Box';
 import { Routes, Route } from "react-router-dom";
 import React from 'react';
-import Resume from './resume.js';
+import Resume from './Resume.js';
 
 
 function App() {

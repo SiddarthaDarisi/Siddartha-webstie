@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { LinkedIn, GitHub } from "@mui/icons-material";
 import WordsPrinter from "./wordPrinter";
-import { useState, useEffect } from 'react';
+
 function HomePage() {
 
     const words = ['a Security Analyst', 'a Full Stack Developer', 'tech-savvy', 'always learning', 'a problem solver','Critical thinker','Creative', 'adaptable','an M.S. Graduate in Cybersecurity and Privacy'];

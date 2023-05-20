@@ -39,7 +39,7 @@ const WordsPrinter = ({ words }) => {
   return (
     <div>
      
-      <Typography variant='h4'>{text}</Typography>
+      <Typography variant='h4'sx={{fontFamily:"Playfair Display",fontWeight:"700"}} >{text}</Typography>
     </div>
   );
 };

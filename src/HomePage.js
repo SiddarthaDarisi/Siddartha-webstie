@@ -51,7 +51,7 @@ function HomePage() {
             </AppBar>
 
             <Container >
-                <Typography variant="h5" sx={{ mt: 2, color: "#4D4D4D" }}>
+                <Typography variant="h5" sx={{ mt: 2, color: "#4D4D4D",fontFamily:"Playfair Display",fontWeight:"700" }}>
                     Hello,  I am
                 </Typography>
 
@@ -96,23 +96,44 @@ function HomePage() {
                             </CardContent>
                         </Card>
                     </Grid>
+                    <Grid item xs={12}>
+                        <Card>
+                            <CardContent>
+                                <Typography variant="h4">Experience</Typography>
+                                <Typography>
+                                    Cybersecurity Intern, ABC Company, 2020-2021
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Card>
+                            <CardContent>
+                                <Typography variant="h4">Experience</Typography>
+                                <Typography>
+                                    Cybersecurity Intern, ABC Company, 2020-2021
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
                 </Grid>
             </Container>
-            <footer>
-                <AppBar position="static" style={{ background: 'black', boxShadow: 'none', position: 'fixed', bottom: 0, left: 0, width: '100%',height:'12vh'}}>
-                    <Toolbar style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Box>
-                            <IconButton color="inherit" href="https://www.linkedin.com/in/siddartha-darisi" target="_blank" rel="noopener noreferrer">
-                                <LinkedIn />
-                            </IconButton>
-                            <IconButton color="inherit" href="https://github.com/SiddarthaDarisi" target="_blank" rel="noopener noreferrer">
-                                <GitHub />
-                            </IconButton>
-                        </Box>
-                    </Toolbar>
-                </AppBar>
+            <Box sx={{mt:2}}>              
+                 <AppBar position="static" style={{ background: 'black', boxShadow: 'none', bottom: 0, left: 0, width: '100%', height: '12vh' }}>
+                <Toolbar style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Box>
+                        <IconButton color="inherit" href="https://www.linkedin.com/in/siddartha-darisi" target="_blank" rel="noopener noreferrer">
+                            <LinkedIn />
+                        </IconButton>
+                        <IconButton color="inherit" href="https://github.com/SiddarthaDarisi" target="_blank" rel="noopener noreferrer">
+                            <GitHub />
+                        </IconButton>
+                    </Box>
+                </Toolbar>
+            </AppBar>
 
-            </footer>
+            </Box>
+
         </Box >
     );
 }

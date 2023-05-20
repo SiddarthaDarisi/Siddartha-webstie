@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Typography } from "@mui/material";
-function WordsPrinter({ words, printTime = 200, deleteTime = 100 }) {
+import { Typography } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+
+const WordsPrinter = ({ words }) => {
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
+
+  const printTime = 300; // Delay between printing each letter (in milliseconds)
+  const deleteTime = 100; // Delay between deleting each letter (in milliseconds)
 
   useEffect(() => {
     const word = words[wordIndex];
@@ -21,7 +25,7 @@ function WordsPrinter({ words, printTime = 200, deleteTime = 100 }) {
         }
 
         setCharIndex((prev) => (isDeleting ? prev : prev + 1));
-      }, 100);  // you can change the waiting time here
+      }, 500);  // you can change the waiting time here
     } else {
       // Continue deleting or printing the current word
       setTimeout(() => {
@@ -29,10 +33,15 @@ function WordsPrinter({ words, printTime = 200, deleteTime = 100 }) {
       }, isDeleting ? deleteTime : printTime);
 
       setText(word.substring(0, charIndex) + (isDeleting ? "_" : "_"));
-    }
-  }, [charIndex, wordIndex,isDeleting]);
+    }// eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [charIndex, wordIndex, isDeleting]);
 
-  return <Typography variant="h4">{text}</Typography>;
-}
+  return (
+    <div>
+     
+      <Typography variant='h4'>{text}</Typography>
+    </div>
+  );
+};
 
 export default WordsPrinter;

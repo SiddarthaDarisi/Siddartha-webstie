@@ -30,7 +30,7 @@ function WordsPrinter({ words, printTime = 200, deleteTime = 100 }) {
 
       setText(word.substring(0, charIndex) + (isDeleting ? "_" : "_"));
     }
-  }, [charIndex, wordIndex,isDeleting,deleteTime,printTime,words]);
+  }, [charIndex, wordIndex,isDeleting]);
 
   return <Typography variant="h4">{text}</Typography>;
 }

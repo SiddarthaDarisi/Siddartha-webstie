@@ -15,21 +15,32 @@ import {
 } from "@mui/material";
 import { LinkedIn, GitHub } from "@mui/icons-material";
 import WordsPrinter from "./wordPrinter";
+import { useNavigate } from 'react-router-dom';
+
+
 
 function HomePage() {
 
-    const words = ['a Security Analyst', 'a Full Stack Developer', 'tech-savvy', 'always learning', 'a problem solver','Critical thinker','Creative', 'adaptable','an M.S. Graduate in Cybersecurity and Privacy'];
+    // Inside your functional component
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        // Navigate to /resume
+        navigate('/Resume');
+    };
+
+    const words = ['a Security Analyst', 'a Full Stack Developer', 'tech-savvy', 'always learning', 'a problem solver', 'Critical thinker', 'Creative', 'adaptable', 'an M.S. Graduate in Cybersecurity and Privacy'];
 
     return (
 
-        <Box>
+        <Box >
             <AppBar position="static" style={{ background: 'black', boxShadow: 'none' }}>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 0 }}>
                         Siddartha Darisi
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
-                    <Button variant="h2" component="div" sx={{ flexGrow: 0, mr: 2, textTransform: 'initial' }}>
+                    <Button onClick={handleButtonClick} variant="h2" component="div" sx={{ flexGrow: 0, mr: 2, textTransform: 'initial' }}>
                         Resume
                     </Button>
                     <Button variant="h2" component="div" sx={{ flexGrow: 0, textTransform: 'initial' }}>
@@ -40,12 +51,12 @@ function HomePage() {
             </AppBar>
 
             <Container >
-                <Typography variant="h5" sx={{ mt: 2,color:"#4D4D4D" }}>
-                Hello,  I am 
+                <Typography variant="h5" sx={{ mt: 2, color: "#4D4D4D" }}>
+                    Hello,  I am
                 </Typography>
 
                 <WordsPrinter words={words} />
-                
+
 
                 <Grid container spacing={2} sx={{ mt: 2 }}>
                     <Grid item xs={12}>
@@ -87,7 +98,22 @@ function HomePage() {
                     </Grid>
                 </Grid>
             </Container>
-        </Box>
+            <footer>
+                <AppBar position="static" style={{ background: 'black', boxShadow: 'none', position: 'fixed', bottom: 0, left: 0, width: '100%',height:'12vh'}}>
+                    <Toolbar style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Box>
+                            <IconButton color="inherit" href="https://www.linkedin.com/in/siddartha-darisi" target="_blank" rel="noopener noreferrer">
+                                <LinkedIn />
+                            </IconButton>
+                            <IconButton color="inherit" href="https://github.com/SiddarthaDarisi" target="_blank" rel="noopener noreferrer">
+                                <GitHub />
+                            </IconButton>
+                        </Box>
+                    </Toolbar>
+                </AppBar>
+
+            </footer>
+        </Box >
     );
 }
 

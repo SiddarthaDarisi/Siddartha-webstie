@@ -4,11 +4,18 @@ import Box from '@mui/material/Box';
 import { Routes, Route } from "react-router-dom";
 import React from 'react';
 // 
+import Resume from './Resume.js';
+const appStyles = {
+    backgroundColor: '#F5F5F7',
+    height: '100vh', // Set the height to ensure the background color covers the full viewport height
+  };
 function App() {
+
     return (
-        <Box sx={{ backgroundColor: "#F5F5F7" }} >
+        <Box sx={{ backgroundColor: "#F5F5F7",height:'100vh' }} >
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/resume" element={<Resume/>} />
 
             </Routes>
         </Box>

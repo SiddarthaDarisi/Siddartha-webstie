@@ -11,3 +11,93 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.classname {
+  height: 20vh;
+}
+
+@media (min-width: 0px) and (max-width: 280px) {
+  .classname {
+    height: 18vh;
+  }
+}
+
+@media (min-width: 290px) and (max-width: 384px) {
+  .classname {
+    height: 16vh;
+  }
+}
+
+@media (min-width: 384px) and (max-width: 415px) {
+  .classname {
+    height: 17vh;
+  }
+}
+
+@media (min-width: 416px) and (max-width: 600px) {
+  .classname {
+    height: 14vh;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .classname {
+    height: 14vh;
+  }
+}
+
+.gutton {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box {
+  height: 100vh;
+}
+
+@media (min-width: 330px) and (max-width: 359px) {
+  .text-box {
+    height: 95vh;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 384px) {
+  .text-box {
+    height: 85vh;
+  }
+}
+
+@media (min-width: 384px) and (max-width: 415px) {
+  .text-box {
+    height: 100h;
+  }
+}
+
+@media (min-width: 416px) and (max-width: 600px) {
+  .text-box {
+    height: 65vh;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .text-box {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .text-box {
+    height: 45vh;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1800px) {
+  .text-box {
+    height: 70vh;
+  }
+}

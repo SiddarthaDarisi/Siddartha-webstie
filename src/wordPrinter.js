@@ -25,7 +25,7 @@ const WordsPrinter = ({ words }) => {
         }
 
         setCharIndex((prev) => (isDeleting ? prev : prev + 1));
-      }, 100);  // you can change the waiting time here
+      }, 200);  // you can change the waiting time here
     } else {
       // Continue deleting or printing the current word
       setTimeout(() => {
@@ -38,8 +38,8 @@ const WordsPrinter = ({ words }) => {
 
   return (
     <div>
-     
-      <Typography variant='h4'sx={{fontFamily:"Playfair Display",fontWeight:"700"}} >{text}</Typography>
+
+      <Typography variant='h3' sx={{ fontFamily: "Playfair Display", fontWeight: "700", mt: 1, mb: 5, fontSize: "55" }} >{text}</Typography>
     </div>
   );
 };

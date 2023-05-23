@@ -89,7 +89,7 @@ theme = {
           },
 
           [theme.breakpoints.up('lg')]: {
-            height: '110vh',
+            height: '109vh',
           },
           [theme.breakpoints.up('xl')]: {
             height: '100vh',

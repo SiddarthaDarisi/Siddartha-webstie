@@ -20,7 +20,7 @@ const BottomBar = () => {
           <Box>
             <IconButton
               color="inherit"
-              href="https://www.linkedin.com/in/harshithbathula/"
+              href="https://www.linkedin.com/in/siddartha-darisi/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -28,7 +28,7 @@ const BottomBar = () => {
             </IconButton>
             <IconButton
               color="inherit"
-              href="https://github.com/HarshithBathula"
+              href="https://github.com/siddarthadarisi"
               target="_blank"
               rel="noopener noreferrer"
             >

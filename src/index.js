@@ -83,7 +83,7 @@ theme = {
           },
           [theme.breakpoints.up('sm')]: {
             height: '85vh',
-          }, 
+          },
           [theme.breakpoints.up('md')]: {
             height: '75vh',
           },
@@ -112,6 +112,7 @@ theme = {
 root.render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>
+
       <CssBaseline />
       <App />
     </BrowserRouter>

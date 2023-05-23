@@ -79,20 +79,20 @@ theme = {
         root: {
 
           [theme.breakpoints.up('xs')]: {
-            height: '140vh',
+            height: '100vh',
           },
           [theme.breakpoints.up('sm')]: {
-            height: '100vh',
+            height: '85vh',
           }, 
           [theme.breakpoints.up('md')]: {
             height: '75vh',
           },
 
           [theme.breakpoints.up('lg')]: {
-            height: '100vh',
+            height: '110vh',
           },
           [theme.breakpoints.up('xl')]: {
-            height: '120vh',
+            height: '100vh',
           },
         },
       },

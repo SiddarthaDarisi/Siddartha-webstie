@@ -57,7 +57,7 @@ code {
 }
 
 .text-box {
-  height: 100vh;
+  height: 80vh;
 }
 
 @media (min-width: 330px) and (max-width: 359px) {
@@ -74,7 +74,7 @@ code {
 
 @media (min-width: 384px) and (max-width: 415px) {
   .text-box {
-    height: 100h;
+    height: 85h;
   }
 }
 
@@ -86,18 +86,18 @@ code {
 
 @media (min-width: 601px) and (max-width: 900px) {
   .text-box {
-    height: 70vh;
+    height: 50vh;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
   .text-box {
-    height: 45vh;
+    height: 40vh;
   }
 }
 
 @media (min-width: 1201px) and (max-width: 1800px) {
   .text-box {
-    height: 70vh;
+    height: 65vh;
   }
 }

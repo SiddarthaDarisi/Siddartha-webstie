@@ -23,7 +23,7 @@ const Contact = () => {
         };
 
         try {
-            const response = await fetch('https://hsa7a8ty5m.execute-api.us-east-1.amazonaws.com/prod/{proxy+}', {
+            const response = await fetch(' https://hsa7a8ty5m.execute-api.us-east-1.amazonaws.com/prod/{proxy+}', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

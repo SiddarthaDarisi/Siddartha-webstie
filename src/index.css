@@ -57,7 +57,7 @@ code {
 }
 
 .text-box {
-  height: 80vh;
+  height: 65vh;
 }
 
 @media (min-width: 330px) and (max-width: 359px) {

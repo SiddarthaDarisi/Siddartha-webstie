@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import hb294 from './Siddartha_Darisi_Resume .pdf';
+import Siddartha_Darisi_Resume from './Siddartha_Darisi_Resume .pdf';
 
 const TopBar = () => {
     const navigate = useNavigate();
@@ -9,8 +9,8 @@ const TopBar = () => {
     const handleButtonClick = () => {
         // Download the resume file
         const link = document.createElement('a');
-        link.href = hb294;
-        link.download = 'hb294.pdf';
+        link.href = Siddartha_Darisi_Resume;
+        link.download = 'siddarthadarisi_resume.pdf';
         link.click();
     };
 
@@ -35,7 +35,7 @@ const TopBar = () => {
                     onClick={handleButtonClick}
                     variant="h2"
                     component="div"
-                    sx={{ flexGrow: 0, mr: 2, textTransform: 'initial' }}
+                    sx={{ flexGrow: 0,mr:1, textTransform: 'initial' }}
                 >
                     Resume
                 </Button>

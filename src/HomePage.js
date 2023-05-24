@@ -46,12 +46,12 @@ function HomePage() {
                     <Grid item xs={12} sx={{ mb: 6 }}>
                         <Card style={{ height: "auto" }}>
                             <CardContent>
-                                <Grid container spacing={1} sx={{ mt: 2, mb: 1 }}>
+                                <Grid container spacing={1} sx={{  mb: 1 }}>
                                     <Grid
                                         item
                                         md={8}
                                         xs={12}
-                                        sx={{
+                                        sx={{mt: 2,
                                             marginLeft: '4%',
                                             pointerEvents: 'none',
                                         }}
@@ -66,13 +66,14 @@ function HomePage() {
                                             src={mypic}
                                             sx={{
                                                 marginLeft: { xs: 6, sm: 'none', md: "35%" },
+                        
                                                 pointerEvents: 'none',
                                                 width: {
                                                     xs: "70%",
                                                     sm: "80%",
                                                     md: "120%",
                                                     lg: "110%",
-                                                    xl: "80%",
+                                                    xl: "90%",
                                                 },
                                             }}
                                         ></Box>

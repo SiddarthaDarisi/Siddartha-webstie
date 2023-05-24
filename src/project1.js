@@ -124,42 +124,49 @@ const Project1 = () => {
                     </LinkedinShareButton>
                 </Box>
 
-                {/* Comments section */}
-                <Box sx={{ marginBottom: 2,marginTop:2  }}>
-    <Typography variant="h6" gutterBottom>Comments</Typography>
-    {comments.map((comment, index) => (
-        <Box key={index} sx={{ marginBottom: 2 }}>
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Avatar />
-                <Box sx={{ marginLeft: 2 }}>
-                    <Typography variant="body1">{comment.author}</Typography>
-                    <Typography variant="caption" sx={{fontSize:"0.7rem"}}>{comment.timestamp}</Typography>
+                 {/* Comments section */}
+      
+        <Box sx={{ marginBottom: 2, marginTop:2, padding: 2, }}>
+        <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold' }}>Discussion</Typography>
+        {comments.map((comment, index) => (
+            <Box key={index} sx={{ marginBottom: 2, padding: 2, borderRadius: 2,boxShadow: 1 , bgcolor: '#f5f5f5' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Avatar sx={{ marginRight: 2,  }} />
+                    <Box>
+                        <Typography variant="body1" sx={{ fontWeight: 'bold' }}>{comment.author}</Typography>
+                        <Typography variant="caption" sx={{ fontSize: "0.7rem", color: 'text.secondary' }}>{new Date(comment.timestamp).toLocaleDateString()}</Typography>
+                    </Box>
+                </Box>
+                <Box sx={{ marginTop: 1 }}>
+                    <Typography variant="body2">{comment.comment}</Typography>
                 </Box>
             </Box>
-            <Box sx={{ marginLeft: 6 }}>
-                <Typography variant="body2">{comment.comment}</Typography>
-            </Box>
-        </Box>
-    ))}
-</Box>
+        ))}
+    </Box>
 
 
-                {/* Comment input field */}
-                <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: 2 }}>
-                    <TextField
-                        label="Your Name"
-                        value={authorName}
-                        onChange={event => setAuthorName(event.target.value)}
-                        
-                    />
-                    <TextField
-                        label="Add a Comment"
-                        value={newComment}
-                        onChange={event => setNewComment(event.target.value)}
-                        fullWidth
-                    />
-                    <Button variant="contained" onClick={addComment} color='grey' sx={{ marginLeft: 2 }}>Submit</Button>
-                </Box>
+    {/* Comment input field */}
+      
+       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 2, marginBottom: 2 }}>
+        <TextField
+            label="Your Name"
+            value={authorName}
+            onChange={event => setAuthorName(event.target.value)}
+            sx={{ width: '100%', marginBottom: 1 }}
+        />
+        <TextField
+            label="Share Your Thoughts"
+            multiline
+            rows={4}
+            value={newComment}
+            onChange={event => setNewComment(event.target.value)}
+            variant="outlined"
+            sx={{ width: '100%', marginBottom: 1 }}
+        />
+        <Button variant="contained" onClick={addComment} color='grey' sx={{ alignSelf: 'flex-end' }}>Post</Button>
+    </Box>
+
+
             </Container>
             <BottomBar />
         </div>

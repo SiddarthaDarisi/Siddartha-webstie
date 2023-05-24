@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import React from 'react';
 import Resume from './Resume.js';
 import Contact from './Contact.js';
-import project1 from './project1.js';
+import Project1 from './project1.js';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/project1" element={<project1 />} />
+                <Route path="/project1" element={<Project1/>} />
             </Routes>
         </Box>
     );

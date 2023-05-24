@@ -10,19 +10,24 @@ import {
 } from "@mui/material";
 import WordsPrinter from "./wordPrinter";
 import mypic from "./images/mypic.jpg";
-import project1 from "./images/sensors.jpg";
-import project2 from "./images/project2.png";
-import project3 from "./images/project3.png";
-import project4 from "./images/project4.png";
+import project1pic from "./images/sensors.jpg";
+import project2pic from "./images/project2.png";
+import project3pic from "./images/project3.png";
+import project4pic from "./images/project4.png";
+import { useNavigate } from "react-router";
 import TopBar from "./topBar.js";
 import BottomBar from "./bottomBar.js";
 import './index.css';
 
 function HomePage() {
+    const navigate = useNavigate();
     const words = [
         'Siddartha Darisi', 'a Security Analyst', 'a Full Stack Developer', 'tech-savvy', 'always learning', 'a problem solver', 'Critical thinker', 'Creative', 'adaptable', 'an M.S. Graduate in Cybersecurity and Privacy'
     ];
-
+    const click1 = () => {
+        // Navigate to /contact
+        navigate('/project1');
+    };
     return (
         <Box>
             <TopBar />
@@ -83,9 +88,9 @@ function HomePage() {
                         </Card>
                     </Grid>
                     <Grid item md={12} lg={6}>
-                        <Card
+                        <Card onClick={click1}
                             sx={{
-                                backgroundImage: `url(${project1})`,
+                                backgroundImage: `url(${project1pic})`,
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 boxShadow: '1px 1px 10px rgba(0, 0, 0, 1)', // Initial shadow
@@ -157,7 +162,7 @@ function HomePage() {
                     <Grid item md={12} lg={6}>
                         <Card
                             sx={{
-                                backgroundImage: `url(${project2})`,
+                                backgroundImage: `url(${project2pic})`,
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 boxShadow: '1px 1px 5px rgba(0, 0, 0, 1)', // Initial shadow
@@ -232,7 +237,7 @@ function HomePage() {
                     <Grid item md={12} lg={6} sx={{}}>
                         <Card
                             sx={{
-                                backgroundImage: `url(${project3})`,
+                                backgroundImage: `url(${project3pic})`,
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 boxShadow: '1px 1px 5px rgba(0, 0, 0, 1)', // Initial shadow
@@ -307,7 +312,7 @@ function HomePage() {
                         <Card
                             sx={{
                                 position: 'relative',
-                                backgroundImage: `url(${project4})`,
+                                backgroundImage: `url(${project4pic})`,
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 boxShadow: '1px 1px 10px rgba(0, 0, 0, 1)', // Initial shadow

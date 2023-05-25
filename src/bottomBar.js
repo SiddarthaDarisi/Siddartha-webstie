@@ -16,6 +16,7 @@ const BottomBar = () => {
           height: '12vh',
         }}
       >
+        
         <Toolbar style={{ display: 'flex', justifyContent: 'center' }}>
           <Box>
             <IconButton

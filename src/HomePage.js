@@ -27,6 +27,10 @@ function HomePage() {
     const click1 = () => {
         // Navigate to /contact
         navigate('/project1');
+    }; 
+    const click2 = () => {
+        // Navigate to /contact
+        navigate('/project2');
     };
     return (
         <Box>
@@ -160,7 +164,7 @@ function HomePage() {
                         </Card>
                     </Grid>
                     <Grid item md={12} lg={6}>
-                        <Card
+                        <Card onClick={click2}
                             sx={{
                                 backgroundImage: `url(${project2pic})`,
                                 backgroundSize: 'cover',
@@ -177,7 +181,7 @@ function HomePage() {
                                     <Container>
                                         <Box className="classname">
                                             <Grid item xs={12}>
-                                                <Typography variant="h4" sx={{ color: "black" }}>Developing a News App using News API, AWS Lambda, Amazon Cognito, and Amazon DynamoDB</Typography>
+                                                <Typography variant="h4" sx={{ color: "black" }}>NewsApp - A Custom-Tailored, User-Centric News Feed Application</Typography>
                                             </Grid>
                                         </Box>
                                         <Box className="text-box">

@@ -38,7 +38,7 @@ const Contact = () => {
       name,
       email,
       message,
-      optIn // Include opt-in value in the form data
+      optIn // Include opt-in value in the form datasa
     };
 
     try {

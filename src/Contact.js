@@ -124,7 +124,7 @@ const Contact = () => {
                   fullWidth
                   margin="normal"
                 />
-                <FormControlLabel
+                <FormControlLabel sx={{mt:{xs:2,md:0},mb:{xs:2,md:0}}}
                   control={
                     <Checkbox
                       checked={optIn}

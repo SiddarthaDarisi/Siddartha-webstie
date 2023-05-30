@@ -16,6 +16,7 @@ code {
   height: 20vh;
 }
 
+
 @media (min-width: 0px) and (max-width: 280px) {
   .classname {
     height: 18vh;
@@ -98,6 +99,6 @@ code {
 
 @media (min-width: 1201px) and (max-width: 1800px) {
   .text-box {
-    height: 65vh;
+    height: 61vh;
   }
 }

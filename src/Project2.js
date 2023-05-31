@@ -14,7 +14,9 @@ const Project2 = () => {
     const handleBack = () => {
         navigate('/');
     };
-
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top when the component mounts
+      }, []);
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
     const [authorName, setAuthorName] = useState('');

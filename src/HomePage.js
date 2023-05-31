@@ -57,7 +57,7 @@ const projects = [
     title: "Developing a Lightweight Version of the Apache Web Server",
     description:
     "Our project focused on the development of a compact and efficient version of the Apache Web Server, encompassing the implementation of both HTTP and FTP protocols. Throughout the development process, we gained valuable insights into the intricate workings of network communication and the complexities involved in handling client requests. One notable achievement was the successful design and execution of a comprehensive testing plan, allowing us to effectively handle various types of client requests, including arbitrary binary blobs. This hands-on experience provided us with a deep understanding of network protocols and further enhanced our expertise in building robust and reliable server-side applications.",   image: project4pic,
-    route: "/",
+    route: "/project4",
     buttonBgColor: "white",
     buttonTextColor: "black",
     titleColor: "white", // Add the titleColor property for custom color

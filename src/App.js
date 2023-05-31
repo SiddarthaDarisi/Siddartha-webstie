@@ -9,12 +9,13 @@ import Project1 from './project1.js';
 import Project2 from './Project2.js';
 import Project3 from './Project3.js';
 import Project4 from './Project4.js';
+import ErrorPage from './ErrorPage.js';
 function App() {
 
     return (
         <Box sx={{ backgroundColor: "#F5F5F7" }} >
             <Routes>
-            
+                <Route path="*" element={<ErrorPage />} />
                 <Route path="/" element={<HomePage />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/contact" element={<Contact />} />

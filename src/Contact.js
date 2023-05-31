@@ -84,11 +84,15 @@ const Contact = () => {
           <MailIcon /> Contact Me
         </Typography>
         <Grid container spacing={2} sx={{ mt: 2 }}>
-          <Grid item xs={12} md={4} sx={{ mt: { xs: 0, md: 5 } }}>
-            <Typography>
-              I would love to chat! Write me an email via the form, and I’ll get back to you ASAP.
-            </Typography>
-          </Grid>
+        <Grid item xs={12} md={4} sx={{ mt: { xs: 0, md: 5 } }}>
+  <Typography>
+    I would love to chat! Whether you have an interesting project on your mind or just want to say hi, feel free to write me an email via the form, and I’ll get back to you ASAP. 
+  </Typography>
+  <Typography sx={{ mt: 2, color: 'Black', fontWeight: 'bold' }}>
+    Looking to hire a dedicated and creative professional? Look no further. I'm always open to exciting new opportunities!
+  </Typography>
+</Grid>
+
           <Grid item xs={12} md={8}>
             <Paper elevation={0} sx={{ p: 2 }}>
               <form onSubmit={handleSubmit}>

@@ -47,7 +47,7 @@ const projects = [
     description:
       "Our project focuses on developing an innovative drowsiness detection system designed to enhance road safety. Leveraging the power of machine learning and artificial intelligence, we have created a robust solution that utilizes computer vision techniques rather than drones. The system is intended to be implemented in vehicles, helping to detect signs of driver drowsiness and fatigue in real-time. By analyzing facial expressions, eye movements, and other relevant indicators, our AI model can accurately identify potential signs of drowsiness and promptly alert the driver. This technology has the potential to significantly reduce the risk of accidents caused by driver fatigue, ultimately saving lives and making our roads safer for everyone.",
     image: project3pic,
-    route: "/",
+    route: "/project3",
     buttonBgColor: "black",
     buttonTextColor: "white",
     titleColor: "black", // Add the titleColor property for custom color

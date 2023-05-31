@@ -7,10 +7,11 @@ import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 import { Facebook, Twitter, LinkedIn } from '@mui/icons-material';
 import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from 'react-share';
-import awsamplifypic from './images/aws -amplify.png';
-const Project2 = () => {
+import awsamplifypic from './images/Picture1.jpg';
+import Drowsiness_detection_ai from './Drowsiness_detection_ai.pdf';
+const Project3 = () => {
     const navigate = useNavigate();
-    const postId = "1204";
+    const postId = "1205";
     const handleBack = () => {
         navigate('/');
     };
@@ -72,47 +73,42 @@ const Project2 = () => {
             })
             .catch(error => console.error(error));
     };
+    const handleDownload = () => {
+      
+        const link = document.createElement('a');
+        link.href = Drowsiness_detection_ai;
+        link.download = 'Drowsiness_detection_ai.pdf';
+        link.click();
+      };
 
     return (
         <div>
             <TopBar />
             <Container maxWidth="md">
-                <IconButton onClick={handleBack} sx={{  mb: 2,mt:1  }}>
+                <IconButton onClick={handleBack} sx={{ mb: 2,mt:1 }}>
                     <ArrowBack />
                 </IconButton>
                 <Typography variant="h4" gutterBottom>
-                NewsApp - A Custom-Tailored, User-Centric News Feed Application
+                Machine Learning AI: Building an Effective Drowsiness Detection
                 </Typography>
 
                 <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: 2 }}>
                     <IconButton sx={{ marginRight: 1 }}>
                         <CalendarToday />
                     </IconButton>
-                    <Typography variant="body2">Published on May 24, 2023</Typography>
+                    <Typography variant="body2">Published on May 31, 2023</Typography>
                 </Box>
                 <img src={awsamplifypic} alt="AWS Amplify" style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px' }} />
-
+        <br/>
 
                 <Typography variant="body1" sx={{ mb: 2 }}>
-                    
-NewsApp stands as a testimony to the blend of cutting-edge technology and meticulous design, enabling users to stay abreast of the latest happenings in their preferred news categories. The application, developed using the leading JavaScript library, React, and Material UI, delivers a visually appealing, intuitive, and seamless user experience, furthering user engagement and satisfaction.<br/><br/>
+                The proposed drowsiness detection strategy introduces an efficient and reliable improvement over traditional methods, such as Adaboost, which train eye classifiers to detect eye state directly. Our strategy is composed of three main steps and utilizes two categories of classifiers, one for the face and one for the eyes. Initially, we employ classifiers to detect both the front and deflected faces, ensuring efficient face detection. Next, we determine the candidate region for the eyes based on the geometric distribution of facial features. Finally, we utilize trained classifiers to accurately detect the state of the eyes within this candidate region. This three-tier approach, although it necessitates both face and eye detection, has demonstrated an impressive average processing speed of 20 frames per second, offering excellent real-time performance. <br/><br/>
 
-The application is backed by a robust infrastructure, leveraging Amazon DynamoDB as its primary database. DynamoDB's high performance and scalability guarantee a swift response to data queries, ensuring that users always get their news updates in real time. Further enhancing the application's performance, we employed GraphQL, a modern data query and manipulation language. GraphQL efficiently streamlines the data querying process by enabling specific data retrieval as per requirement, thus eliminating the excessive data transmitted in a traditional RESTful API architecture. This potent combination of DynamoDB and GraphQL offers an effective, data-efficient backend solution that is both performant and economical.<br/><br/>
+In comparison with our method, the traditional method can sometimes prove more time-consuming. Despite its single-step detection of eyes, it often requires more time due to the need for the eye classifier to search within the entire frame, rather than within a small candidate region. This situation is especially the case when faced with a deflected face, where the traditional method can take over twice the time to detect the face and eye state. <br/><br/>
 
-In an era of serverless computing, NewsApp embraces AWS Lambda functions via AWS Amplify for handling backend processes. AWS Lambda offers the convenience of running the code without the hassle of managing servers, thereby improving the scalability and reducing the overhead costs. AWS Amplify, a set of tools and services that help front-end web and mobile developers build full-stack applications, works in synergy with AWS Lambda to provide a comprehensive serverless computing solution.<br/><br/>
-
-One of the key features of NewsApp is its intelligent feed algorithm. The algorithm curates and presents general category news to users when they are not signed in. However, upon successful sign-in, the algorithm adapts and customizes the feed based on user preferences, thereby offering a personalized news reading experience. This dynamic adaptability of the app to cater to individual user preferences makes it stand apart from other news feed applications.<br/><br/>
-
-Furthermore, NewsApp boasts a user-friendly sign-up and sign-in page that makes it easy for new users to join the platform and for existing users to access their customized feeds. An intuitive design, combined with efficient error handling, ensures a hassle-free sign-up and sign-in process.<br/><br/>
-
-To further personalize the news-reading experience, NewsApp is equipped with a dedicated settings page where users can customize their news preferences by choosing from a plethora of categories. Whether users are interested in technology, politics, sports, entertainment, or any other subject, NewsApp is designed to cater to their specific news consumption preferences.<br/><br/>
-
-Lastly, understanding the curiosity of users to explore specific topics of interest, NewsApp incorporates a built-in search functionality. This feature allows users to delve into particular subjects, providing them with a comprehensive set of news articles relevant to their search keywords.<br/><br/>
-
-In conclusion, NewsApp is a dynamic, user-centric news feed application designed and developed using state-of-the-art technologies. It exemplifies a successful amalgamation of a visually appealing user interface, an efficient backend system, and smart features that adapt to user preferences, offering a personalized news-reading experience. <br/><br/>
-                    
+The block diagram of our system showcases the connections made in the execution of the project. The system takes its input from a camera and an algorithm is developed to detect and track the face and eyes. Subsequently, calculations are performed to determine whether the driver is drowsy. If the driver's state is assessed as drowsy, the warning system issues an alarm. This consideration of drowsiness detection is crucial given the increasing number of road accidents attributed to driver fatigue. Our system aims to reduce such accidents by monitoring parameters such as eye detection, blinking, eyelid closure, and yawning, which are indicators of drowsiness. <br/><br/>
                  
-    Check out NewsApp <a href="https://main.d2i9e25pjo5xpi.amplifyapp.com/" target="_blank" rel="noopener noreferrer">here</a>!
+Check out the report <span onClick={handleDownload} style={{ textDecoration: 'underline', cursor: 'pointer' }}>here</span>.
 
                 </Typography>
                
@@ -184,4 +180,4 @@ In conclusion, NewsApp is a dynamic, user-centric news feed application designed
     );
 };
 
-export default Project2;
+export default Project3;

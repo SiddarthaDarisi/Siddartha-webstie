@@ -7,8 +7,8 @@ const WordsPrinter = ({ words }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
 
-  const printTime = 200; // Delay between printing each letter (in milliseconds)
-  const deleteTime = 100; // Delay between deleting each letter (in milliseconds)
+  const printTime = 350; // Delay between printing each letter (in milliseconds)
+  const deleteTime = 200; // Delay between deleting each letter (in milliseconds)
 
   useEffect(() => {
     const word = words[wordIndex];
@@ -25,7 +25,7 @@ const WordsPrinter = ({ words }) => {
         }
 
         setCharIndex((prev) => (isDeleting ? prev : prev + 1));
-      }, 200);  // you can change the waiting time here
+      }, 70);  // you can change the waiting time here
     } else {
       // Continue deleting or printing the current word
       setTimeout(() => {
@@ -38,7 +38,6 @@ const WordsPrinter = ({ words }) => {
 
   return (
     <div>
-
       <Typography variant='h3' sx={{ fontFamily: "Playfair Display", fontWeight: "700", mt: 1, mb: 5, fontSize: "55" }} >{text}</Typography>
     </div>
   );

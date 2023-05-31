@@ -77,7 +77,7 @@ const Project1 = () => {
         <div>
             <TopBar />
             <Container maxWidth="md">
-                <IconButton onClick={handleBack} sx={{ mb: 2 }}>
+                <IconButton onClick={handleBack} sx={{  mb: 2,mt:1  }}>
                     <ArrowBack />
                 </IconButton>
                 <Typography variant="h4" gutterBottom>

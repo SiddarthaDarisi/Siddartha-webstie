@@ -9,7 +9,9 @@ import {
   Grid,
   Paper,
   Checkbox,
-  FormControlLabel
+  FormControlLabel,
+  useMediaQuery,
+  Hidden
 } from '@mui/material';
 import { Alert } from '@mui/material';
 import BottomBar from './bottomBar';
@@ -63,7 +65,7 @@ const Contact = () => {
       setSnackbarOpen(true);
     }
   };
-
+  const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down('md'));
   const resetForm = () => {
     setName('');
     setEmail('');
@@ -84,14 +86,16 @@ const Contact = () => {
           <MailIcon /> Contact Me
         </Typography>
         <Grid container spacing={2} sx={{ mt: 2 }}>
-        <Grid item xs={12} md={4} sx={{ mt: { xs: 0, md: 5 } }}>
-  <Typography>
-    I would love to chat! Whether you have an interesting project on your mind or just want to say hi, feel free to write me an email via the form, and I’ll get back to you ASAP. 
-  </Typography>
-  <Typography sx={{ mt: 2, color: 'Black', fontWeight: 'bold' }}>
-    Looking to hire a dedicated and creative professional? Look no further. I'm always open to exciting new opportunities!
-  </Typography>
-</Grid>
+          <Grid item xs={12} md={4} sx={{ mt: { xs: 0, md: 5 } }}>
+            <Typography>
+              I would love to chat! Whether you have an interesting project on your mind or just want to say hi, feel free to write me an email via the form, and I’ll get back to you ASAP. 
+            </Typography>
+            <Hidden only={['xs', 'sm']}>
+              <Typography sx={{ mt: 2, color: 'Black', fontWeight: 'bold' }}>
+                Looking to hire a dedicated and creative professional? Look no further. I'm always open to exciting new opportunities!
+              </Typography>
+            </Hidden>
+          </Grid>
 
           <Grid item xs={12} md={8}>
             <Paper elevation={0} sx={{ p: 2 }}>
@@ -150,6 +154,11 @@ const Contact = () => {
             </Paper>
           </Grid>
         </Grid>
+        {isSmallScreen &&
+          <Typography sx={{ mt: 4, color: 'Black', fontWeight: 'bold' }}>
+            Looking to hire a dedicated and creative professional? Look no further. I'm always open to exciting new opportunities!
+          </Typography>
+        }
         <Snackbar open={snackbarOpen} autoHideDuration={3000} onClose={handleSnackbarClose}>
           {errorMessage ? (
             <Alert onClose={handleSnackbarClose} severity="error">

@@ -1,5 +1,5 @@
-import { Typography } from '@mui/material';
 import React, { useState, useEffect } from 'react';
+import { Typography } from '@mui/material';
 
 const WordsPrinter = ({ words }) => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -7,39 +7,35 @@ const WordsPrinter = ({ words }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
 
-  const printTime = 350; // Delay between printing each letter (in milliseconds)
-  const deleteTime = 200; // Delay between deleting each letter (in milliseconds)
+  const printTime = 150; // Delay between printing each letter (in milliseconds)
+  const deleteTime = 100; // Delay between deleting each letter (in milliseconds)
 
   useEffect(() => {
-    const word = words[wordIndex];
+    const currentWord = words[wordIndex];
 
-    // Check if we've finished deleting or printing a word
-    if ((isDeleting && charIndex === 0) || (!isDeleting && charIndex === word.length)) {
-      setIsDeleting(!isDeleting);
+    // If we've finished typing or deleting a word
+    if ((isDeleting && charIndex === -1) || (!isDeleting && charIndex === currentWord.length)) {
+      setIsDeleting(!isDeleting); // Switch modes
 
-      // Wait for some time before starting the next operation
-      setTimeout(() => {
-        if (isDeleting) {
-          // If we've just finished deleting a word, move to the next word
-          setWordIndex((wordIndex + 1) % words.length);
-        }
+      // Move to the next word if we've just finished deleting
+      if (isDeleting) {
+        setWordIndex((prevWordIndex) => (prevWordIndex + 1) % words.length);
+      }
 
-        setCharIndex((prev) => (isDeleting ? prev : prev + 1));
-      }, 70);  // you can change the waiting time here
+      // Wait a while before continuing
+      setTimeout(() => {}, 1000);
     } else {
-      // Continue deleting or printing the current word
-      setTimeout(() => {
-        setCharIndex((prev) => prev + (isDeleting ? -1 : 1));
-      }, isDeleting ? deleteTime : printTime);
+      setText(currentWord.substring(0, charIndex + 1) + (isDeleting ? '_' : '_'));
 
-      setText(word.substring(0, charIndex) + (isDeleting ? "_" : "_"));
-    }// eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [charIndex, wordIndex, isDeleting]);
+      // Continue typing or deleting
+      setTimeout(() => {
+        setCharIndex((prevCharIndex) => prevCharIndex + (isDeleting ? -1 : 1));
+      }, isDeleting ? deleteTime : printTime);
+    }
+  }, [charIndex, wordIndex, isDeleting, words]);
 
   return (
-    <div>
-      <Typography variant='h3' sx={{ fontFamily: "Playfair Display", fontWeight: "700", mt: 1, mb: 5, fontSize: "55" }} >{text}</Typography>
-    </div>
+    <Typography variant='h3' sx={{ fontFamily: 'Playfair Display', fontWeight: 700, mt: 1, mb: 5, fontSize: 55 }}>{text}</Typography>
   );
 };
 

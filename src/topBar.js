@@ -25,6 +25,7 @@ const TopBar = () => {
     };
 
     return (
+     
         <AppBar position="static" style={{ background: 'black', boxShadow: 'none' }}>
             <Toolbar>
                 <Typography onClick={handleButtonClick3} variant="h6" component="div" sx={{ flexGrow: 0 }}>

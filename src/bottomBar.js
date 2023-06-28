@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Box, IconButton } from '@mui/material';
+import { AppBar, Toolbar, Box, IconButton,  } from '@mui/material';
 import { LinkedIn, GitHub } from '@mui/icons-material';
 
 const BottomBar = () => {
@@ -15,8 +15,15 @@ const BottomBar = () => {
           width: '100%',
           height: '12vh',
         }}
-      >
-        
+      > 
+       {/* <Typography
+      variant="body2"
+      color="inherit"
+    style={{justifyContent : 'center'}}
+    >
+      &copy; {new Date().getFullYear()}  All rights reserved.
+    </Typography>
+         */}
         <Toolbar style={{ display: 'flex', justifyContent: 'center' }}>
           <Box>
             <IconButton
@@ -35,7 +42,9 @@ const BottomBar = () => {
             >
               <GitHub />
             </IconButton>
+          
           </Box>
+        
         </Toolbar>
       </AppBar>
     </Box>

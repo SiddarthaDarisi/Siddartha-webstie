@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, Paper } from "@mui/material";
 import {
   Typography,
   Box,
@@ -18,6 +18,9 @@ import { useNavigate } from "react-router";
 import TopBar from "./topBar.js";
 import BottomBar from "./bottomBar.js";
 import "./index.css";
+import aws from "./images/aws.png";
+import CEH from "./images/CEH.png";
+import CompTIA from "./images/CompTIA.png";
 
 const projects = [
   {
@@ -162,7 +165,77 @@ function HomePage() {
               </CardContent>
             </Card>
           </Grid>
-          {projects.map((project, index) => (
+          </Grid>
+          <Grid container spacing={4} sx={{ mt: 0 }}>
+  {/* <Grid item xs={12}>
+    <Paper elevation={5} sx={{  borderRadius: "5px" }}>
+      <Typography
+        variant="h4" component="h1" 
+        sx={{
+          padding: "0.5%",
+          mt: 1,
+          textAlign: "center",
+          color: "black",
+        }}
+      >
+        Vendor Certified
+      </Typography>
+    
+    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", mt: 2 }}>
+      <Box
+        mt={1}
+        sx={{
+          width: "30%",
+          maxWidth: "200px",
+          height: "auto",
+        }}
+        component="img"
+        src={CEH}
+      />
+      <Box
+        mt={1}
+        sx={{
+          width: "30%",
+          maxWidth: "200px",
+          height: "auto",
+        }}
+        component="img"
+        src={aws}
+      />
+      <Box
+        mt={1}
+        sx={{
+          width: "30%",
+          maxWidth: "200px",
+          height: "auto",
+        }}
+        component="img"
+        src={CompTIA}
+      />
+    </Box>
+    </Paper>
+  </Grid>
+  </Grid>
+  <Grid container spacing={4} sx={{ mt: 1 }}>
+    
+  <Grid item xs={12}>
+    <Paper elevation={5} sx={{ backgroundColor: "White", borderRadius: "5px" }}>
+      <Typography
+        variant="h4" component="h1" 
+        sx={{
+          padding: "0.5%",
+          mt: 1,
+          textAlign: "center",
+          color: "Black",
+        }}
+      >
+        Projects
+      </Typography>
+    </Paper>
+  </Grid> */}
+  
+     {projects.map((project, index) => (
+          
             <Grid item md={12} lg={ 6} key={index}>
               <Card
                 onClick={() => handleClick(project.route)}

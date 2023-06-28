@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Paper } from "@mui/material";
+import { Button } from "@mui/material";
 import {
   Typography,
   Box,
@@ -18,9 +18,9 @@ import { useNavigate } from "react-router";
 import TopBar from "./topBar.js";
 import BottomBar from "./bottomBar.js";
 import "./index.css";
-import aws from "./images/aws.png";
-import CEH from "./images/CEH.png";
-import CompTIA from "./images/CompTIA.png";
+// import aws from "./images/aws.png";
+// import CEH from "./images/CEH.png";
+// import CompTIA from "./images/CompTIA.png";
 
 const projects = [
   {

@@ -5,7 +5,7 @@ import {
   Box,
   Container,
   Grid,
-  Card,
+  Card, Paper,
   CardContent,
 } from "@mui/material";
 import WordsPrinter from "./wordPrinter";
@@ -18,9 +18,9 @@ import { useNavigate } from "react-router";
 import TopBar from "./topBar.js";
 import BottomBar from "./bottomBar.js";
 import "./index.css";
-// import aws from "./images/aws.png";
-// import CEH from "./images/CEH.png";
-// import CompTIA from "./images/CompTIA.png";
+import aws from "./images/aws.png";
+import CEH from "./images/CEH.png";
+import CompTIA from "./images/CompTIA.png";
 
 const projects = [
   {
@@ -28,7 +28,7 @@ const projects = [
     description:
       "The SolarisWind incident had a devastating impact, causing a catastrophic failure of the wind farm located in a major metropolitan area. This resulted in widespread power outages, disrupting the local grid and affecting critical infrastructure, businesses, and individuals. The economic repercussions have been significant, with millions of dollars in damages and losses. In response to this event, I have written a comprehensive paper analyzing the incident, its implications, and proposing strategies to improve the resilience and security of renewable energy infrastructure.The SolarisWind incident serves as a stark reminder of the vulnerabilities and challenges associated with maintaining a reliable and robust renewable energy infrastructure.",
     image: project1pic,
-    route: "/project1",
+    route: "/post1",
     buttonBgColor: "white",
     buttonTextColor: "black",
     titleColor: "white", // Add the titleColor property for custom color
@@ -39,7 +39,7 @@ const projects = [
     description:
     "The News App is a web application that leverages the News API to fetch the latest news articles from various sources. AWS Lambda functions handle the backend logic and API requests, allowing for scalable and cost-effective execution. With Amazon Cognito integration, users can securely sign up, log in, and access personalized features. User data and credentials are stored in Amazon DynamoDB, along with article data for efficient retrieval. This serverless architecture, powered by cutting-edge technologies such as the News API, AWS Lambda, Amazon Cognito, and Amazon DynamoDB, ensures a seamless and secure news browsing experience with real-time updates and personalized features.",
       image: project2pic,
-    route: "/project2",
+    route: "/post2",
     buttonBgColor: "black",
     buttonTextColor: "white",
     titleColor: "black", // Add the titleColor property for custom color
@@ -50,7 +50,7 @@ const projects = [
     description:
       "Our project focuses on developing an innovative drowsiness detection system designed to enhance road safety. Leveraging the power of machine learning and artificial intelligence, we have created a robust solution that utilizes computer vision techniques rather than drones. The system is intended to be implemented in vehicles, helping to detect signs of driver drowsiness and fatigue in real-time. By analyzing facial expressions, eye movements, and other relevant indicators, our AI model can accurately identify potential signs of drowsiness and promptly alert the driver. This technology has the potential to significantly reduce the risk of accidents caused by driver fatigue, ultimately saving lives and making our roads safer for everyone.",
     image: project3pic,
-    route: "/project3",
+    route: "/post3",
     buttonBgColor: "black",
     buttonTextColor: "white",
     titleColor: "black", // Add the titleColor property for custom color
@@ -60,7 +60,7 @@ const projects = [
     title: "Developing a Lightweight Version of the Apache Web Server",
     description:
     "Our project focused on the development of a compact and efficient version of the Apache Web Server, encompassing the implementation of both HTTP and FTP protocols. Throughout the development process, we gained valuable insights into the intricate workings of network communication and the complexities involved in handling client requests. One notable achievement was the successful design and execution of a comprehensive testing plan, allowing us to effectively handle various types of client requests, including arbitrary binary blobs. This hands-on experience provided us with a deep understanding of network protocols and further enhanced our expertise in building robust and reliable server-side applications.",   image: project4pic,
-    route: "/project4",
+    route: "/post4",
     buttonBgColor: "white",
     buttonTextColor: "black",
     titleColor: "white", // Add the titleColor property for custom color
@@ -107,7 +107,7 @@ function HomePage() {
         </Typography>
         <WordsPrinter words={words} />
         <Grid container spacing={4} sx={{ mt: 2 }}>
-          <Grid item xs={12} sx={{ mb: 6 }}>
+          <Grid item xs={12} sx={{ mb: 0 }}>
             <Card style={{ height: "auto" }}>
               <CardContent>
                 <Grid container spacing={1} sx={{ mb: 1 }}>
@@ -168,27 +168,17 @@ function HomePage() {
           </Grid>
           </Grid>
           <Grid container spacing={4} sx={{ mt: 0 }}>
-  {/* <Grid item xs={12}>
-    <Paper elevation={5} sx={{  borderRadius: "5px" }}>
-      <Typography
-        variant="h4" component="h1" 
-        sx={{
-          padding: "0.5%",
-          mt: 1,
-          textAlign: "center",
-          color: "black",
-        }}
-      >
-        Vendor Certified
-      </Typography>
+  <Grid item xs={12}>
+   
     
     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", mt: 2 }}>
       <Box
         mt={1}
         sx={{
           width: "30%",
-          maxWidth: "200px",
+          maxWidth: "170px",
           height: "auto",
+          opacity: 0.8,
         }}
         component="img"
         src={CEH}
@@ -197,8 +187,10 @@ function HomePage() {
         mt={1}
         sx={{
           width: "30%",
-          maxWidth: "200px",
+          maxWidth: "170px",
           height: "auto",
+          opacity: 0.9, // Reduce opacity by 10
+          
         }}
         component="img"
         src={aws}
@@ -207,20 +199,21 @@ function HomePage() {
         mt={1}
         sx={{
           width: "30%",
-          maxWidth: "200px",
+          maxWidth: "170px",
           height: "auto",
+          opacity: 0.9,
         }}
         component="img"
         src={CompTIA}
       />
     </Box>
-    </Paper>
+    
   </Grid>
   </Grid>
   <Grid container spacing={4} sx={{ mt: 1 }}>
     
   <Grid item xs={12}>
-    <Paper elevation={5} sx={{ backgroundColor: "White", borderRadius: "5px" }}>
+    <Paper elevation={1} sx={{ backgroundColor: "White", borderRadius: "5px",  boxShadow: "0px -4px 4px -2px rgba(0, 0, 0, 0.2)" }}>
       <Typography
         variant="h4" component="h1" 
         sx={{
@@ -233,7 +226,7 @@ function HomePage() {
         Projects
       </Typography>
     </Paper>
-  </Grid> */}
+  </Grid>
   
      {projects.map((project, index) => (
           
@@ -320,7 +313,9 @@ function HomePage() {
               </Card>
             </Grid>
           ))}
+         
         </Grid>
+
       </Container>
       <BottomBar />
     </Box>

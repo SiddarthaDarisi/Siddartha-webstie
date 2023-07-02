@@ -23,6 +23,10 @@ const TopBar = () => {
         // Navigate to /
         navigate('/');
     };
+    // const handleButtonClick4 = () => {
+    //     // Navigate to /
+    //     navigate('/Blog');
+    // };
 
     return (
      
@@ -32,6 +36,14 @@ const TopBar = () => {
                     Siddartha Darisi
                 </Typography>
                 <Box sx={{ flexGrow: 1 }} />
+                {/* <Button
+                    onClick={handleButtonClick4}
+                    variant="h2"
+                    component="div"
+                    sx={{ flexGrow: 0,mr:1, textTransform: 'initial' }}
+                >
+                    Blog
+                </Button> */}
                 <Button
                     onClick={handleButtonClick}
                     variant="h2"

@@ -73,12 +73,14 @@ function HomePage() {
   const words = [
     "Siddartha Darisi",
     "a Security Analyst",
-    "a Full Stack Developer",
+    "AWS Certified Solutions Architect",
     "tech-savvy",
     "always learning",
+    "CEH Certified",
     "a problem solver",
     "Critical thinker",
     "Creative",
+    "CompTIA Security+ Certified",
     "adaptable",
     "an M.S. Graduate in Cybersecurity and Privacy",
   ];
@@ -129,8 +131,7 @@ function HomePage() {
                       "Hello, I'm Siddartha Darisi, a recent graduate who
                       holds a Master of Science in Cybersecurity and Privacy.
                       Fueled by a passion for securing digital frontiers, I'm
-                      drawn to roles such as a Security Analyst, Full Stack
-                      Developer, and Cloud Solutions Architect. My interest
+                      drawn to roles such as a Security Analyst, Network engineer, and Cloud Solutions Architect. My interest
                       extends to working as a SOC Analyst, where I can
                       contribute to identifying and countering security threats.
                       But my life isn't all about the ones and zeros. Away from

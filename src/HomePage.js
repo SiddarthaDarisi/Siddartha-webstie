@@ -128,20 +128,7 @@ function HomePage() {
                         fontSize: { xs: 15, sm: 15 },
                       }}
                     >
-                      "Hello, I'm Siddartha Darisi, a recent graduate who
-                      holds a Master of Science in Cybersecurity and Privacy.
-                      Fueled by a passion for securing digital frontiers, I'm
-                      drawn to roles such as a Security Analyst, Network engineer, and Cloud Solutions Architect. My interest
-                      extends to working as a SOC Analyst, where I can
-                      contribute to identifying and countering security threats.
-                      But my life isn't all about the ones and zeros. Away from
-                      the screens, I like to push my personal boundaries
-                      through exhilarating activities like skydiving and
-                      skiing, seeking adventures in travel, and grounding
-                      myself with serene hikes. Each journey, whether it be on
-                      a rugged trail or within the complex realms of
-                      cybersecurity, is a new learning experience I deeply
-                      cherish."
+                      "Hello! I'm Siddartha Darisi, proudly holding a Master of Science in Cybersecurity & Privacy from the New Jersey Institute of Technology. With over three years of hands-on experience, I've forged my expertise as a Cyber Security Analyst, mastering tools from Splunk to OpenVAS. While I'm deeply invested in network security, threat mitigation, and cloud solutions, I'm equally passionate about life outside the digital realm. Whether I'm decrypting cyber threats or trekking a nature trail, I believe in embracing challenges and learning from every experience. When I'm not analyzing network protocols, you might find me chasing adventures from skydiving to hiking, always seeking the next exhilarating journey. Let's connect and navigate the intricate world of cybersecurity or share tales of our latest adventures!"
                     </Typography>
                   </Grid>
                   <Grid item xs={12} md={2} sx={{ height: "auto" }}>

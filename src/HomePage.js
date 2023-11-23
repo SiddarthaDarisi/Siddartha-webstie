@@ -128,7 +128,10 @@ function HomePage() {
                         fontSize: { xs: 15, sm: 15 },
                       }}
                     >
-                      "Hello! I'm Siddartha Darisi, proudly holding a Master of Science in Cybersecurity & Privacy from the New Jersey Institute of Technology. With over three years of hands-on experience, I've forged my expertise as a Cyber Security Analyst, mastering tools from Splunk to OpenVAS. While I'm deeply invested in network security, threat mitigation, and cloud solutions, I'm equally passionate about life outside the digital realm. Whether I'm decrypting cyber threats or trekking a nature trail, I believe in embracing challenges and learning from every experience. When I'm not analyzing network protocols, you might find me chasing adventures from skydiving to hiking, always seeking the next exhilarating journey. Let's connect and navigate the intricate world of cybersecurity or share tales of our latest adventures!"
+                      "Hello, I'm Siddartha Darisi, an AWS Certified Full Stack Developer and a proud alumnus of New Jersey Institute of Technology with a Master's in Cybersecurity & Privacy. With over three years of experience in the tech realm, my expertise lies in creating scalable, secure applications, leveraging a wide array of technologies including Java, SQL, React.js, and Node.js. My professional journey includes significant contributions at JPMorgan Chase & Co., where I've been instrumental in enhancing core banking systems and streamlining UIs through innovative microservices architecture. My tenure at Brane Enterprises was marked by a keen focus on transitioning architectures and optimizing database efficiency.
+<br></br>
+<br/>
+Beyond the world of coding, I am an adventurer at heart, always eager to explore new terrains, from serene nature trails to vibrant cultural landscapes. Whether it's tackling complex coding challenges or embarking on thrilling adventures, I believe in the power of continuous learning and embracing new experiences. Let's connect to discuss the fascinating world of full-stack development or to exchange stories from our diverse adventures!"
                     </Typography>
                   </Grid>
                   <Grid item xs={12} md={2} sx={{ height: "auto" }}>

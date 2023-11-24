@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import Siddartha_Darisi_Resume from './Siddartha_Darisi_Resume .pdf';
+import Siddartha_Darisi_Resume from './Siddartha_Darisi_CV.pdf';
 
 const TopBar = () => {
     const navigate = useNavigate();

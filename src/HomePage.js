@@ -72,7 +72,7 @@ function HomePage() {
   const navigate = useNavigate();
   const words = [
     "Siddartha Darisi",
-    "a Security Analyst",
+    "a Full Stack Develoer",
     "AWS Certified Solutions Architect",
     "tech-savvy",
     "always learning",
@@ -80,7 +80,6 @@ function HomePage() {
     "a problem solver",
     "Critical thinker",
     "Creative",
-    "CompTIA Security+ Certified",
     "adaptable",
     "an M.S. Graduate in Cybersecurity and Privacy",
   ];

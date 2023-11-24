@@ -26,7 +26,7 @@ const Contact = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [optIn, setOptIn] = useState(false); // New state for opt-in checkbox
-
+  const [isHovering, setIsHovering] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -87,15 +87,30 @@ const Contact = () => {
         </Typography>
         <Grid container spacing={2} sx={{ mt: 2 }}>
           <Grid item xs={12} md={4} sx={{ mt: { xs: 0, md: 5 } }}>
+         
+              
             <Typography>
-              I would love to chat! Whether you have an interesting project on your mind or just want to say hi, feel free to write me an email via the form, and I’ll get back to you ASAP. 
+              I would love to chat! Whether you have an interesting project on your mind or just want to say hi, feel free to write me an email via the form or contact me on LinkedIn and I’ll get back to you ASAP. 
             </Typography>
+            <Typography 
+            onMouseEnter={() => setIsHovering(true)} 
+            style={{ cursor: 'pointer' }}
+          >
+            Connect on <b>LinkedIn</b>
+          </Typography>
+          {isHovering && (
+           <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="siddartha-darisi" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/siddartha-darisi?trk=profile-badge">Siddartha Darisi</a></div>
+              
+          )}
+              
             <Hidden only={['xs', 'sm']}>
               <Typography sx={{ mt: 2, color: 'Black', fontWeight: 'bold' }}>
                 Looking to hire a dedicated and creative professional? Look no further. I'm always open to exciting new opportunities!
               </Typography>
             </Hidden>
           </Grid>
+          
+          
 
           <Grid item xs={12} md={8}>
             <Paper elevation={0} sx={{ p: 2 }}>

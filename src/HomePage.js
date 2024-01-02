@@ -72,7 +72,7 @@ function HomePage() {
   const navigate = useNavigate();
   const words = [
     "Siddartha Darisi",
-    "a Full Stack Develoer",
+    "a Full Stack developer",
     "AWS Certified Solutions Architect",
     "tech-savvy",
     "always learning",
